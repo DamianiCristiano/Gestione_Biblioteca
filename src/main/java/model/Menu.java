@@ -13,8 +13,10 @@ public class Menu {
 			System.out.println("1: Visualizza libri disponibili");
 			System.out.println("2: Visualizza libro selezionato");
 			System.out.println("3: Aggiungi libro");
-			System.out.println("4: Elimina libro");
-			System.out.println("5: Esci");
+			System.out.println("4: Presta libro:");
+			System.out.println("5: Restituisci libro:");
+			System.out.println("6: Elimina libro");
+			System.out.println("7: Esci");
 			scelta = sc.nextInt();
 			sc.nextLine();
 
@@ -35,10 +37,18 @@ public class Menu {
             }
             
             if (scelta == 4) {
+                gb.prestaLibro();
+            }
+            
+            if (scelta == 5) {
+                gb.restituisciLibro();
+            }
+            
+            if (scelta == 6) {
                 gb.eliminaLibro();
             }
 			
-		} while (scelta != 5);
+		} while (scelta != 7);
 		System.out.println("Buonagiornata!");
 	}
 
